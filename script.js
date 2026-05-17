@@ -180,11 +180,24 @@ document.addEventListener('DOMContentLoaded', () => {
       if (pass !== confirm) { markError('signupConfirm','signupConfirmErr','Passwords do not match.'); valid = false; }
 
       if (valid) {
-        const s = document.getElementById('signupSuccess');
-        s.textContent = '🎉 Account created! Welcome to EduLearn!';
-        setTimeout(() => s.textContent = '', 3500);
-        signupForm.reset();
-      }
+  const users = JSON.parse(localStorage.getItem('edulearn_users') || '[]');
+  users.push({ name, email, time: new Date().toLocaleString() });
+  localStorage.setItem('edulearn_users', JSON.stringify(users));
+
+  let table = '<br><strong>📋 Registered Users:</strong><br><br>';
+  users.forEach((u, i) => {
+    table += `<div style="border:1px solid #f97316;padding:0.75rem;border-radius:8px;margin-bottom:0.5rem;font-size:0.85rem;text-align:left">
+      <strong>#${i+1}</strong> &nbsp;|&nbsp;
+      👤 <strong>${u.name}</strong> &nbsp;|&nbsp;
+      📧 ${u.email} &nbsp;|&nbsp;
+      🕐 ${u.time}
+    </div>`;
+  });
+
+  const s = document.getElementById('signupSuccess');
+  s.innerHTML = '🎉 Account created! Welcome to EduLearn!' + table;
+  signupForm.reset();
+}
     });
     ['signupName','signupEmail','signupPass','signupConfirm'].forEach(id => {
       const el = document.getElementById(id);
