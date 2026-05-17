@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduLearn – Learn Without Limits</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">Edu<span>Learn</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="showcase.html">Courses</a></li>
+    <li><a href="interactive.html">Interactive</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-ghost" onclick="window.location='interactive.html'">Login</button>
+    <button class="btn-primary" onclick="window.location='showcase.html'">Start Learning</button>
+    <button class="dark-toggle" id="darkToggle" title="Toggle dark mode">🌙</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+  <div class="hero-content">
+    <span class="hero-badge">🎓 #1 Online Learning Platform</span>
+    <h1 class="hero-title">Learn Without<br/><em>Limits.</em></h1>
+    <p class="hero-sub">Unlock 500+ expert-crafted courses in technology, design, business & science. Learn at your pace, earn real certificates.</p>
+    <div class="hero-cta">
+      <button class="btn-primary large" onclick="window.location='showcase.html'">Explore Courses →</button>
+      <button class="btn-outline large" onclick="window.location='about.html'">How It Works</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>50K+</strong><span>Students</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>500+</strong><span>Courses</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>120+</strong><span>Instructors</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card floating">
+      <div class="hc-icon">🧠</div>
+      <div>
+        <div class="hc-title">AI & Machine Learning</div>
+        <div class="hc-sub">48 lessons · Beginner</div>
+        <div class="progress-bar"><div class="progress-fill" style="width:65%"></div></div>
+      </div>
+    </div>
+    <div class="hero-card floating delay1">
+      <div class="hc-icon">🎨</div>
+      <div>
+        <div class="hc-title">UI/UX Design Mastery</div>
+        <div class="hc-sub">36 lessons · Intermediate</div>
+        <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+      </div>
+    </div>
+    <div class="hero-card floating delay2">
+      <div class="hc-icon">💻</div>
+      <div>
+        <div class="hc-title">Full Stack Web Dev</div>
+        <div class="hc-sub">72 lessons · Advanced</div>
+        <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="section-label">Why EduLearn?</div>
+  <h2 class="section-title">Built for real learning</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Self-Paced Learning</h3>
+      <p>Study on your schedule. Pause, rewind, and revisit content any time, forever.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <h3>Verified Certificates</h3>
+      <p>Earn industry-recognised certificates that employers actually care about.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👥</div>
+      <h3>Live Mentorship</h3>
+      <p>Weekly live Q&A sessions with expert instructors and peer study groups.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <h3>Learn Anywhere</h3>
+      <p>Fully responsive platform — phone, tablet, or desktop. Download for offline too.</p>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR COURSES PREVIEW -->
+<section class="courses-preview">
+  <div class="section-label">Top Picks</div>
+  <h2 class="section-title">Most Popular Courses</h2>
+  <div class="cards-row">
+    <div class="course-card">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#f97316,#fbbf24)">🧠</div>
+      <div class="course-info">
+        <span class="course-tag">AI & Tech</span>
+        <h4>Machine Learning A–Z</h4>
+        <p>Python, TensorFlow, real projects</p>
+        <div class="course-meta"><span>⭐ 4.9</span><span>12,400 students</span></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#6366f1,#a78bfa)">🎨</div>
+      <div class="course-info">
+        <span class="course-tag">Design</span>
+        <h4>UI/UX From Zero to Hero</h4>
+        <p>Figma, Prototyping, Research</p>
+        <div class="course-meta"><span>⭐ 4.8</span><span>9,200 students</span></div>
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#10b981,#34d399)">💻</div>
+      <div class="course-info">
+        <span class="course-tag">Development</span>
+        <h4>Full Stack Web Dev</h4>
+        <p>HTML, CSS, JS, React, Node</p>
+        <div class="course-meta"><span>⭐ 4.9</span><span>18,700 students</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:2.5rem">
+    <button class="btn-primary" onclick="window.location='showcase.html'">View All Courses →</button>
+  </div>
+</section>
+
+<!-- TESTIMONIAL STRIP -->
+<section class="testimonial-strip">
+  <blockquote>"EduLearn transformed my career. I landed a dev job 3 months after finishing the Full Stack course."</blockquote>
+  <cite>— Aisha K., Software Engineer @ Zoho</cite>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">Edu<span>Learn</span></div>
+  <p>© 2025 EduLearn. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="showcase.html">Courses</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
