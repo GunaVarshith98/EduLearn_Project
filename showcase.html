@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses – EduLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">Edu<span>Learn</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="showcase.html" class="active">Courses</a></li>
+    <li><a href="interactive.html">Interactive</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-ghost" onclick="window.location='interactive.html'">Login</button>
+    <button class="btn-primary" onclick="window.location='interactive.html'">Sign Up</button>
+    <button class="dark-toggle" id="darkToggle" title="Toggle dark mode">🌙</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="hero-badge">500+ Courses</span>
+    <h1>Find Your <em>Course</em></h1>
+    <p>Expert-crafted learning paths for every skill level and career goal.</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="courses-section">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="tech">Technology</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+    <button class="filter-btn" data-filter="business">Business</button>
+    <button class="filter-btn" data-filter="science">Science</button>
+  </div>
+
+  <div class="courses-grid" id="coursesGrid">
+
+    <div class="course-card-big" data-category="tech">
+      <div class="ccb-thumb" style="background:linear-gradient(135deg,#f97316,#fbbf24)">🧠</div>
+      <div class="ccb-body">
+        <span class="course-tag">Technology</span>
+        <h3>Machine Learning A–Z</h3>
+        <p>Go from zero to building real ML models with Python and TensorFlow. Includes 5 capstone projects.</p>
+        <div class="ccb-meta">
+          <span>⭐ 4.9</span><span>48 lessons</span><span>Beginner</span>
+        </div>
+        <div class="ccb-footer">
+          <span class="price">₹1,499</span>
+          <button class="btn-primary" onclick="window.location='interactive.html'">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card-big" data-category="design">
+      <div class="ccb-thumb" style="background:linear-gradient(135deg,#6366f1,#a78bfa)">🎨</div>
+      <div class="ccb-body">
+        <span class="course-tag">Design</span>
+        <h3>UI/UX Design Mastery</h3>
+        <p>Master Figma, user research, wireframing, and prototyping with real-world case studies.</p>
+        <div class="ccb-meta">
+          <span>⭐ 4.8</span><span>36 lessons</span><span>Intermediate</span>
+        </div>
+        <div class="ccb-footer">
+          <span class="price">₹1,299</span>
+          <button class="btn-primary" onclick="window.location='interactive.html'">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card-big" data-category="tech">
+      <div class="ccb-thumb" style="background:linear-gradient(135deg,#10b981,#34d399)">💻</div>
+      <div class="ccb-body">
+        <span class="course-tag">Technology</span>
+        <h3>Full Stack Web Development</h3>
+        <p>HTML, CSS, JavaScript, React, Node.js, and databases. Build 10 real production apps.</p>
+        <div class="ccb-meta">
+          <span>⭐ 4.9</span><span>72 lessons</span><span>All Levels</span>
+        </div>
+        <div class="ccb-footer">
+          <span class="price">₹1,799</span>
+          <button class="btn-primary" onclick="window.location='interactive.html'">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card-big" data-category="business">
+      <div class="ccb-thumb" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">📊</div>
+      <div class="ccb-body">
+        <span class="course-tag">Business</span>
+        <h3>Digital Marketing Pro</h3>
+        <p>SEO, social media, Google Ads, email campaigns. Learn to grow any business online.</p>
+        <div class="ccb-meta">
+          <span>⭐ 4.7</span><span>30 lessons</span><span>Beginner</span>
+        </div>
+        <div class="ccb-footer">
+          <span class="price">₹999</span>
+          <button class="btn-primary" onclick="window.location='interactive.html'">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card-big" data-category="science">
+      <div class="ccb-thumb" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8)">🔬</div>
+      <div class="ccb-body">
+        <span class="course-tag">Science</span>
+        <h3>Data Science Fundamentals</h3>
+        <p>Statistics, Python, pandas, data visualisation. Become job-ready in data analytics.</p>
+        <div class="ccb-meta">
+          <span>⭐ 4.8</span><span>54 lessons</span><span>Intermediate</span>
+        </div>
+        <div class="ccb-footer">
+          <span class="price">₹1,399</span>
+          <button class="btn-primary" onclick="window.location='interactive.html'">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card-big" data-category="design">
+      <div class="ccb-thumb" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">📸</div>
+      <div class="ccb-body">
+        <span class="course-tag">Design</span>
+        <h3>Graphic Design Essentials</h3>
+        <p>Adobe Illustrator, Photoshop, brand identity. Build a professional design portfolio.</p>
+        <div class="ccb-meta">
+          <span>⭐ 4.7</span><span>40 lessons</span><span>Beginner</span>
+        </div>
+        <div class="ccb-footer">
+          <span class="price">₹1,099</span>
+          <button class="btn-primary" onclick="window.location='interactive.html'">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-brand">Edu<span>Learn</span></div>
+  <p>© 2025 EduLearn. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="showcase.html">Courses</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – EduLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">Edu<span>Learn</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="showcase.html">Courses</a></li>
+    <li><a href="interactive.html">Interactive</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-ghost" onclick="window.location='interactive.html'">Login</button>
+    <button class="btn-primary" onclick="window.location='courses.html'">Start Learning</button>
+    <button class="dark-toggle" id="darkToggle" title="Toggle dark mode">🌙</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="hero-badge">Get In Touch</span>
+    <h1>Contact <em>Us</em></h1>
+    <p>Have a question or feedback? We'd love to hear from you.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div class="contact-form-box">
+      <h3>Send us a message</h3>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="cName" placeholder="Full name"/>
+          <span class="err" id="cNameErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="cEmail" placeholder="you@email.com"/>
+          <span class="err" id="cEmailErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <select id="cSubject">
+            <option value="">Select a topic</option>
+            <option>Course Enquiry</option>
+            <option>Technical Support</option>
+            <option>Billing</option>
+            <option>Partnership</option>
+            <option>Other</option>
+          </select>
+          <span class="err" id="cSubjectErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="cMessage" rows="5" placeholder="Tell us how we can help..."></textarea>
+          <span class="err" id="cMessageErr"></span>
+        </div>
+        <button type="submit" class="btn-primary full-width">Send Message →</button>
+        <div class="form-success" id="contactSuccess"></div>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info-box">
+      <h3>Other ways to reach us</h3>
+      <div class="contact-info-item">
+        <span class="ci-icon">📧</span>
+        <div>
+          <strong>Email</strong>
+          <p>hello@edulearn.in</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <span class="ci-icon">📞</span>
+        <div>
+          <strong>Phone</strong>
+          <p>+91 98765 43210</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <span class="ci-icon">📍</span>
+        <div>
+          <strong>Address</strong>
+          <p>Infopark, Kakkanad, Kochi, Kerala – 682030</p>
+        </div>
+      </div>
+      <div class="contact-social">
+        <strong>Follow Us</strong>
+        <div class="social-links">
+          <a href="#" class="social-btn">𝕏 Twitter</a>
+          <a href="#" class="social-btn">in LinkedIn</a>
+          <a href="#" class="social-btn">▶ YouTube</a>
+          <a href="#" class="social-btn">📘 Facebook</a>
+        </div>
+      </div>
+      <!-- Simple map placeholder -->
+      <div class="map-placeholder">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7716098165406!2d76.35018731479407!3d10.02288779283278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5f6a2614!2sInfopark%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1620000000000"
+          width="100%" height="200" style="border:0;border-radius:12px" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-brand">Edu<span>Learn</span></div>
+  <p>© 2025 EduLearn. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="showcase.html">Courses</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive – EduLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">Edu<span>Learn</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="showcase.html">Courses</a></li>
+    <li><a href="interactive.html" class="active">Interactive</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="dark-toggle" id="darkToggle" title="Toggle dark mode">🌙</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="hero-badge">🎮 Interactive Zone</span>
+    <h1>Learn by <em>Doing</em></h1>
+    <p>Login, take a quiz, and explore your learning path — all in one place.</p>
+  </div>
+</section>
+
+<section class="interactive-section">
+  <!-- TAB SWITCHER -->
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="login">🔐 Login / Sign Up</button>
+    <button class="tab-btn" data-tab="quiz">🧠 Quick Quiz</button>
+    <button class="tab-btn" data-tab="tracker">📈 Progress Tracker</button>
+  </div>
+
+  <!-- LOGIN TAB -->
+  <div class="tab-content active" id="tab-login">
+    <div class="auth-box">
+      <div class="auth-toggle">
+        <button class="auth-btn active" id="showLogin">Login</button>
+        <button class="auth-btn" id="showSignup">Sign Up</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="auth-form" novalidate>
+        <h3>Welcome back 👋</h3>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="you@email.com"/>
+          <span class="err" id="loginEmailErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="loginPass" placeholder="••••••••"/>
+          <span class="err" id="loginPassErr"></span>
+        </div>
+        <button type="submit" class="btn-primary full-width">Login →</button>
+        <div class="form-success" id="loginSuccess"></div>
+      </form>
+
+      <!-- SIGNUP FORM -->
+      <form id="signupForm" class="auth-form hidden" novalidate>
+        <h3>Create your account 🚀</h3>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="signupName" placeholder="Your full name"/>
+          <span class="err" id="signupNameErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="signupEmail" placeholder="you@email.com"/>
+          <span class="err" id="signupEmailErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="signupPass" placeholder="Min 8 characters"/>
+          <span class="err" id="signupPassErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" id="signupConfirm" placeholder="Repeat password"/>
+          <span class="err" id="signupConfirmErr"></span>
+        </div>
+        <button type="submit" class="btn-primary full-width">Create Account →</button>
+        <div class="form-success" id="signupSuccess"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- QUIZ TAB -->
+  <div class="tab-content" id="tab-quiz">
+    <div class="quiz-box">
+      <div id="quizContainer">
+        <div class="quiz-header">
+          <span id="quizProgress">Question 1 of 5</span>
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizFill" style="width:20%"></div></div>
+        </div>
+        <div class="quiz-question" id="quizQuestion"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <button class="btn-primary" id="nextBtn" disabled>Next →</button>
+      </div>
+      <div id="quizResult" class="hidden">
+        <div class="quiz-result-icon" id="quizEmoji">🎉</div>
+        <h3 id="quizScore"></h3>
+        <p id="quizMsg"></p>
+        <button class="btn-primary" id="retryBtn">Try Again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACKER TAB -->
+  <div class="tab-content" id="tab-tracker">
+    <div class="tracker-box">
+      <h3>Your Learning Progress</h3>
+      <p class="tracker-sub">Click the bars to update your progress!</p>
+      <div class="tracker-items">
+        <div class="tracker-item">
+          <div class="tracker-label"><span>Machine Learning A–Z</span><span class="tracker-pct" id="pct0">65%</span></div>
+          <div class="tracker-bar" data-index="0">
+            <div class="tracker-fill" id="fill0" style="width:65%;background:linear-gradient(90deg,#f97316,#fbbf24)"></div>
+          </div>
+        </div>
+        <div class="tracker-item">
+          <div class="tracker-label"><span>UI/UX Design Mastery</span><span class="tracker-pct" id="pct1">40%</span></div>
+          <div class="tracker-bar" data-index="1">
+            <div class="tracker-fill" id="fill1" style="width:40%;background:linear-gradient(90deg,#6366f1,#a78bfa)"></div>
+          </div>
+        </div>
+        <div class="tracker-item">
+          <div class="tracker-label"><span>Full Stack Web Dev</span><span class="tracker-pct" id="pct2">80%</span></div>
+          <div class="tracker-bar" data-index="2">
+            <div class="tracker-fill" id="fill2" style="width:80%;background:linear-gradient(90deg,#10b981,#34d399)"></div>
+          </div>
+        </div>
+        <div class="tracker-item">
+          <div class="tracker-label"><span>Digital Marketing Pro</span><span class="tracker-pct" id="pct3">20%</span></div>
+          <div class="tracker-bar" data-index="3">
+            <div class="tracker-fill" id="fill3" style="width:20%;background:linear-gradient(90deg,#ec4899,#f43f5e)"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tracker-controls">
+        <label>Select Course:
+          <select id="trackerSelect">
+            <option value="0">Machine Learning A–Z</option>
+            <option value="1">UI/UX Design Mastery</option>
+            <option value="2">Full Stack Web Dev</option>
+            <option value="3">Digital Marketing Pro</option>
+          </select>
+        </label>
+        <label>Progress: <span id="rangeVal">50</span>%
+          <input type="range" id="progressRange" min="0" max="100" value="50"/>
+        </label>
+        <button class="btn-primary" id="updateProgress">Update Progress</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-brand">Edu<span>Learn</span></div>
+  <p>© 2025 EduLearn. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="showcase.html">Courses</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

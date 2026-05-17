@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – EduLearn</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">Edu<span>Learn</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="showcase.html">Courses</a></li>
+    <li><a href="interactive.html">Interactive</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-ghost" onclick="window.location='interactive.html'">Login</button>
+    <button class="btn-primary" onclick="window.location='courses.html'">Start Learning</button>
+    <button class="dark-toggle" id="darkToggle" title="Toggle dark mode">🌙</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="hero-badge">📝 EduLearn Blog</span>
+    <h1>Ideas & <em>Insights</em></h1>
+    <p>Tips, career advice, and learning strategies from our expert instructors.</p>
+  </div>
+</section>
+
+<section class="blog-section">
+  <!-- SEARCH -->
+  <div class="blog-search-bar">
+    <input type="text" id="blogSearch" placeholder="Search articles..."/>
+    <button class="btn-primary" id="blogSearchBtn">Search</button>
+  </div>
+
+  <div class="blog-grid" id="blogGrid">
+
+    <article class="blog-card featured">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#f97316,#fbbf24)">
+        <span class="blog-emoji">🧠</span>
+      </div>
+      <div class="blog-body">
+        <span class="course-tag">Featured · AI</span>
+        <h3>How AI is Reshaping the Future of Online Education</h3>
+        <p>Personalised learning paths, instant feedback, AI tutors — the classroom of 2030 is being built today. Here's what you need to know.</p>
+        <div class="blog-meta">
+          <span>👤 Riya Kumar</span><span>📅 May 2025</span><span>☕ 6 min read</span>
+        </div>
+        <button class="btn-outline" onclick="togglePost(this)">Read More ↓</button>
+        <div class="blog-full hidden">
+          <p>Artificial intelligence is no longer a futuristic concept in education — it's here. Platforms like EduLearn are already using AI to recommend courses, identify where students are struggling, and adapt content delivery in real time.</p>
+          <p>The most exciting development is the rise of AI tutors: conversational agents that can answer student questions 24/7, explain concepts in multiple ways, and even grade assignments with nuanced feedback.</p>
+          <p>For learners, this means education that moulds itself around you — not the other way around. For institutions, it means dramatically better outcomes at lower cost. The question isn't whether AI will transform education. It already is.</p>
+          <button class="btn-outline" onclick="togglePost(this)">Show Less ↑</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#6366f1,#a78bfa)">
+        <span class="blog-emoji">💼</span>
+      </div>
+      <div class="blog-body">
+        <span class="course-tag">Career</span>
+        <h3>5 Skills That Will Make You Hire-able in 2025</h3>
+        <p>The job market has changed. Here are the five skills employers are desperately hiring for right now.</p>
+        <div class="blog-meta">
+          <span>👤 Arun Menon</span><span>📅 Apr 2025</span><span>☕ 4 min read</span>
+        </div>
+        <button class="btn-outline" onclick="togglePost(this)">Read More ↓</button>
+        <div class="blog-full hidden">
+          <p>1. <strong>AI Literacy</strong> — You don't need to build AI, but you need to work with it. Prompt engineering, AI tool proficiency, and understanding model limitations are now baseline expectations.</p>
+          <p>2. <strong>Data Interpretation</strong> — Every team uses data. Reading a dashboard, spotting trends, and making data-backed decisions separates top candidates.</p>
+          <p>3. <strong>Communication</strong> — Remote-first work has raised the bar for written and async communication skills.</p>
+          <p>4. <strong>Cloud Basics</strong> — AWS, GCP, or Azure familiarity is expected in virtually every tech role.</p>
+          <p>5. <strong>Adaptability</strong> — The half-life of skills is shrinking. Employers want people who can learn fast, not just people who know a lot.</p>
+          <button class="btn-outline" onclick="togglePost(this)">Show Less ↑</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#10b981,#34d399)">
+        <span class="blog-emoji">📚</span>
+      </div>
+      <div class="blog-body">
+        <span class="course-tag">Learning Tips</span>
+        <h3>The Science of Retaining What You Learn</h3>
+        <p>Why do we forget 70% of what we read within 24 hours — and what actually works to fix it?</p>
+        <div class="blog-meta">
+          <span>👤 Sara Pillai</span><span>📅 Mar 2025</span><span>☕ 5 min read</span>
+        </div>
+        <button class="btn-outline" onclick="togglePost(this)">Read More ↓</button>
+        <div class="blog-full hidden">
+          <p>The Ebbinghaus Forgetting Curve shows that without reinforcement, we lose most new information within a day. But the research also shows exactly how to fight back.</p>
+          <p><strong>Spaced repetition</strong> is the most evidence-backed method: revisit material at increasing intervals (day 1, day 3, day 7, day 21). Apps like Anki make this automatic.</p>
+          <p><strong>Active recall</strong> — testing yourself rather than re-reading — is twice as effective as passive review. Close the textbook and try to write down everything you know.</p>
+          <p><strong>Teach it</strong>: explaining a concept to someone else (or even to a rubber duck) forces you to fill in gaps in your understanding.</p>
+          <button class="btn-outline" onclick="togglePost(this)">Show Less ↑</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">
+        <span class="blog-emoji">🎯</span>
+      </div>
+      <div class="blog-body">
+        <span class="course-tag">Motivation</span>
+        <h3>How to Stay Consistent When Learning Online</h3>
+        <p>The dropout rate for online courses is 90%. Here's how to be in the 10% that finishes.</p>
+        <div class="blog-meta">
+          <span>👤 James Teo</span><span>📅 Feb 2025</span><span>☕ 3 min read</span>
+        </div>
+        <button class="btn-outline" onclick="togglePost(this)">Read More ↓</button>
+        <div class="blog-full hidden">
+          <p>The biggest mistake online learners make is relying on motivation. Motivation is a feeling — it comes and goes. What actually works is <strong>systems</strong>.</p>
+          <p>Set a non-negotiable time block: 30 minutes every morning before breakfast. Attach learning to an existing habit (habit stacking). Track your streak visually — a simple calendar with X marks is surprisingly powerful.</p>
+          <p>Find accountability: a study partner, a Discord community, or even publicly committing to your goal on LinkedIn. And remember: done is better than perfect. A 20-minute session beats a skipped 2-hour session every time.</p>
+          <button class="btn-outline" onclick="togglePost(this)">Show Less ↑</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div style="text-align:center;margin-top:2rem">
+    <button class="btn-outline" id="loadMoreBtn">Load More Articles</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-brand">Edu<span>Learn</span></div>
+  <p>© 2025 EduLearn. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="showcase.html">Courses</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
