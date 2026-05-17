@@ -83,15 +83,11 @@ EduLearn_Project/
 
 ---
 
-## 👥 Team Members & Roles
+## 👤 Developer
 
-| Member | Role | Pages / Tasks |
-|--------|------|---------------|
-| **Member 1** | Frontend Lead | Homepage (`index.html`) + CSS (`style.css`) |
-| **Member 2** | Content & Pages | About (`about.html`) + Contact (`contact.html`) |
-| **Member 3** | Showcase | Courses page (`showcase.html`) + filter feature |
-| **Member 4** | JavaScript | All JS features (`script.js`) – forms, quiz, tracker |
-| **Member 5** | DevOps & Docs | GitHub setup, GitHub Pages hosting, README |
+| Name | Role | Tasks |
+|------|------|-------|
+| **Guna Varshith Molakalapalli** | Full Stack Developer | Homepage, About, Showcase, Interactive, Contact, Blog, CSS Design, JavaScript Features, GitHub Setup & Hosting |
 
 ---
 
